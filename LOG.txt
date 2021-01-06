@@ -1,0 +1,12 @@
+Required:
+react-router: to mimic actual app like routing
+bootstrap 5: to use styles
+
+Goal:
+To make a complete Responsive-UI.
+
+Application:
+Home Page
+User Page
+Admin Dashboard
+Chat Messenger
