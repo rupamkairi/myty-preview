@@ -29,6 +29,25 @@
   width: 5rem;
 }
 
+/* icon size */
+/* default is 1 rem that is small-icon*/
+.mid-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.large-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.sticky-sidebar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
 .sticky-bottom {
   position: sticky;
   bottom: 0;

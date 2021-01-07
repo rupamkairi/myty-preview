@@ -17,7 +17,7 @@ export default function AdminIndex() {
   const { url } = useRouteMatch();
 
   return (
-    <div className="overflow-hidden">
+    <div>
       <Router>
         <div className="d-flex">
           <div className="d-none d-lg-block d-xl-block d-xxl-block">
