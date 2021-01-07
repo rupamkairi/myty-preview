@@ -14,6 +14,9 @@ import GuestIndex from "./container/Guest/Index";
 import Index from "./container/Index/Index";
 import Error from "./container/Error";
 
+//
+import "./styles/index.css";
+
 function App() {
   return (
     <div className="App">
@@ -22,10 +25,10 @@ function App() {
           <Route exact path="/">
             <Index />
           </Route>
-          <Route exact path="/admin">
+          <Route path="/admin">
             <AdminIndex />
           </Route>
-          <Route exact path="/:userId">
+          <Route path="/:userId">
             <GuestIndex />
           </Route>
           <Route path="*">
