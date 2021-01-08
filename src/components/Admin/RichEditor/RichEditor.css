@@ -1,0 +1,30 @@
+.block {
+  border: none;
+  outline: none;
+  background-color: #ffffff;
+  color: #555555;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  transition: all 50ms ease;
+}
+
+.block:hover,
+.block:focus,
+.block:active {
+  color: #000000;
+}
+
+.block-control {
+  border: none;
+  outline: none;
+  background-color: #ffffff;
+  color: #888888;
+  border-radius: 2px;
+
+  transition: all 50ms ease;
+}
+
+.block-control:hover {
+  color: #000000;
+}

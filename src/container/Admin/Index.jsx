@@ -7,7 +7,10 @@ import {
 } from "react-router-dom";
 
 //
-import MessengerIndex from "./Messenger/Index";
+import Admin from "./Admin";
+import MessengerIndex from "./Messenger/MessengerIndex";
+import EditorIndex from "./Editor/EditorIndex";
+import SettingsIndex from "./Settings/SettingsIndex";
 import Error from "../Error";
 
 //
@@ -26,11 +29,16 @@ export default function AdminIndex() {
           <div className="w-full">
             <Switch>
               <Route exact path={url}>
-                <p>Admin at {url}</p>
-                <p>{`${url}messenger`}</p>
+                <Admin />
               </Route>
               <Route exact path={`${url}/messenger`}>
                 <MessengerIndex />
+              </Route>
+              <Route exact path={`${url}/editor`}>
+                <EditorIndex />
+              </Route>
+              <Route exact path={`${url}/settings`}>
+                <SettingsIndex />
               </Route>
               <Route path={`${url}/*`}>
                 <Error />
