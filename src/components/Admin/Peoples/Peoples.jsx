@@ -1,18 +1,18 @@
 import React from "react";
 
 export default function Peoples() {
-  const list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+  const list = [0, 1, 2, 3, 4, 5, 6, 7];
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid d-flex flex-column">
       <div className="sticky-top">
         <span className="fs-1 fw-bolder">Peoples</span>
         <div className="input-group my-4">
           <input className="form-control" type="text" />
-          <span class="input-group-text">Search</span>
+          <span className="input-group-text">Search</span>
         </div>
       </div>
-      <div className="mt-4">
+      <div className="mt-4 flex-grow-1 h-full">
         {list.map((key) => (
           <div
             key={key}

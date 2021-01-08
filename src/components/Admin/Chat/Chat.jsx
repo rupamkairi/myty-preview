@@ -20,7 +20,7 @@ export default function Chat() {
           <OptionsMenu />
         </span>
       </header>
-      <main className="h-screen">
+      <main className="flex-grow-1">
         <Threads />
       </main>
       <footer className="h-f-bar sticky-bottom d-flex align-items-center justify-content-between">

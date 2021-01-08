@@ -20,9 +20,9 @@ export default function AdminIndex() {
     <div>
       <Router>
         <div className="d-flex">
-          <div className="d-none d-lg-block d-xl-block d-xxl-block">
-            <SideBar />
-          </div>
+          {/* <div className="d-none d-lg-block d-xl-block d-xxl-block"> */}
+          <SideBar />
+          {/* </div> */}
           <div className="w-full">
             <Switch>
               <Route exact path={url}>
