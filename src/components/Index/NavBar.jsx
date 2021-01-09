@@ -9,7 +9,7 @@ export default function NavBar() {
       <nav className="navbar bar">
         <div className="container d-flex justify-content-between align-items-center">
           <Link to="/">
-            <span className="fs-2 fw-bold">Brand</span>
+            <span className="fs-2 fw-bolder">Brand</span>
           </Link>
           <Link>
             <span>

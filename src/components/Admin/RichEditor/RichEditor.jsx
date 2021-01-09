@@ -35,7 +35,7 @@ export default function RichEditor() {
   return (
     <div className="container my-5">
       <div className="text-end">
-        <button className="btn btn-outline-secondary" onClick={preview}>
+        <button className="btn btn-outline-primary" onClick={preview}>
           <PreviewIcon />
           <span className="ps-2">Preview</span>
         </button>
@@ -109,12 +109,12 @@ export default function RichEditor() {
         </div>
       </div>
       <textarea
-        className="container border-0 block fs-3 fw-normal"
+        className="container border-0 block"
         rows="20"
         placeholder="Content goes here"
       ></textarea>
       <div className="text-end my-5">
-        <button className="btn btn-outline-secondary" onClick={preview}>
+        <button className="btn btn-outline-primary" onClick={preview}>
           <PreviewIcon />
           <span className="ps-2">Preview</span>
         </button>

@@ -11,21 +11,21 @@ import RichEditorPreview from "../../../components/Admin/RichEditor/RichEditorPr
 import Error from "../../Error";
 
 export default function EditorIndex() {
-  const { url } = useRouteMatch();
+  const { path } = useRouteMatch();
   return (
     <div>
       <Router>
         <Switch>
-          <Route exact path={url}>
+          <Route exact path={path}>
             <RichEditor />
           </Route>
-          <Route exact path={`${url}/active`}>
+          <Route exact path={`${path}/active`}>
             <RichEditor />
           </Route>
-          <Route exact path={`${url}/preview`}>
+          <Route exact path={`${path}/preview`}>
             <RichEditorPreview />
           </Route>
-          <Route path={`${url}/*`}>
+          <Route path={`${path}/*`}>
             <Error />
           </Route>
         </Switch>

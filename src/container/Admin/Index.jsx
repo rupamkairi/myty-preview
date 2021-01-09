@@ -5,7 +5,8 @@ import {
   Route,
   useRouteMatch,
 } from "react-router-dom";
-
+//
+import { ChatViewProvider } from "../../contexts/ChatViewContext";
 //
 import Admin from "./Admin";
 import MessengerIndex from "./Messenger/MessengerIndex";
@@ -17,7 +18,7 @@ import Error from "../Error";
 import SideBar from "../../components/Admin/SideBar/SideBar";
 
 export default function AdminIndex() {
-  const { url } = useRouteMatch();
+  const { path } = useRouteMatch();
 
   return (
     <div>
@@ -28,19 +29,21 @@ export default function AdminIndex() {
           {/* </div> */}
           <div className="w-full">
             <Switch>
-              <Route exact path={url}>
+              <Route exact path={path}>
                 <Admin />
               </Route>
-              <Route exact path={`${url}/messenger`}>
-                <MessengerIndex />
+              <Route exact path={`${path}/messenger`}>
+                <ChatViewProvider>
+                  <MessengerIndex />
+                </ChatViewProvider>
               </Route>
-              <Route exact path={`${url}/editor`}>
+              <Route exact path={`${path}/editor`}>
                 <EditorIndex />
               </Route>
-              <Route exact path={`${url}/settings`}>
+              <Route exact path={`${path}/settings`}>
                 <SettingsIndex />
               </Route>
-              <Route path={`${url}/*`}>
+              <Route exact path={`${path}/*`}>
                 <Error />
               </Route>
             </Switch>

@@ -18,7 +18,7 @@ export default function RichEditorPreview() {
   return (
     <div className="container my-5">
       <div className="text-end">
-        <button className="btn btn-outline-primary me-2" onClick={edit}>
+        <button className="btn btn-outline-secondary me-2" onClick={edit}>
           <EditIcon />
           <span className="ps-2">Keep Editing</span>
         </button>
@@ -34,7 +34,7 @@ export default function RichEditorPreview() {
       ></textarea>
 
       <textarea
-        className="container border-0 block fs-3 fw-normal"
+        className="container border-0 block"
         rows="20"
         placeholder="Content goes here"
       ></textarea>
