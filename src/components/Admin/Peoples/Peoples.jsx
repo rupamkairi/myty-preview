@@ -1,10 +1,12 @@
 import React from "react";
 //
 import { useChatData } from "../../../contexts/ChatDataContext";
+import { useChatView } from "../../../contexts/ChatViewContext";
 
 export default function Peoples() {
   // const list = [0, 1, 2, 3, 4, 5, 6, 7];
   const { changeChatData } = useChatData();
+  const { changeChatView } = useChatView();
 
   return (
     <div className="container-fluid d-flex flex-column">
@@ -34,6 +36,7 @@ export default function Peoples() {
             changeChatData({
               object: "chat_with_johndoe",
             });
+            changeChatView(1);
           }}
         >
           {/* <div className="border rounded-circle me-4 p-2 fs-4">JD</div> */}
@@ -50,6 +53,7 @@ export default function Peoples() {
             changeChatData({
               object: "chat_with_janedoe",
             });
+            changeChatView(1);
           }}
         >
           {/* <div className="border rounded-circle me-4 p-2 fs-4">JD</div> */}

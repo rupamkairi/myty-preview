@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 //
 import { ChatViewProvider } from "../../contexts/ChatViewContext";
+import { ChatDataProvider } from "../../contexts/ChatDataContext";
 //
 import Admin from "./Admin";
 import MessengerIndex from "./Messenger/MessengerIndex";
@@ -34,7 +35,9 @@ export default function AdminIndex() {
               </Route>
               <Route exact path={`${path}/messenger`}>
                 <ChatViewProvider>
-                  <MessengerIndex />
+                  <ChatDataProvider>
+                    <MessengerIndex />
+                  </ChatDataProvider>
                 </ChatViewProvider>
               </Route>
               <Route exact path={`${path}/editor`}>

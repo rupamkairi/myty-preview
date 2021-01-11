@@ -1,6 +1,7 @@
 import React from "react";
 //
 import { useChatData } from "../../../contexts/ChatDataContext";
+
 //
 import BackToPeoples from "./actions/BackToPeoples";
 import OptionsMenu from "./actions/OptionsMenu";
@@ -14,23 +15,29 @@ export default function Chat() {
   const { currentChatData } = useChatData();
 
   return (
-    <div className="container-fluid h-full d-flex flex-column justify-content-between tab-pane">
-      <header className="h-bar sticky-top d-flex align-items-center justify-content-between">
-        <span>
-          <BackToPeoples />
-        </span>
-        <ChatHeader />
-        <span>
-          <OptionsMenu />
-        </span>
-      </header>
-      <main className="flex-grow-1">
-        <Threads />
-        <pre>{JSON.stringify(currentChatData, null, 2)}</pre>
-      </main>
-      <footer className="h-f-bar sticky-bottom d-flex align-items-center justify-content-between">
-        <ChatFooter />
-      </footer>
-    </div>
+    <React.Fragment>
+      {currentChatData === 0 ? (
+        <p>no data</p>
+      ) : (
+        <div className="container-fluid h-full d-flex flex-column justify-content-between tab-pane">
+          <header className="h-bar sticky-top d-flex align-items-center justify-content-between">
+            <span>
+              <BackToPeoples />
+            </span>
+            <ChatHeader />
+            <span>
+              <OptionsMenu />
+            </span>
+          </header>
+          <main className="flex-grow-1">
+            <Threads />
+            <pre>{JSON.stringify(currentChatData, null, 2)}</pre>
+          </main>
+          <footer className="h-f-bar sticky-bottom d-flex align-items-center justify-content-between">
+            <ChatFooter />
+          </footer>
+        </div>
+      )}
+    </React.Fragment>
   );
 }
