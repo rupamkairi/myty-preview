@@ -3,7 +3,7 @@ import React from "react";
 import { useChatData } from "../../../contexts/ChatDataContext";
 import { useChatView } from "../../../contexts/ChatViewContext";
 
-export default function Peoples() {
+export default function People() {
   // const list = [0, 1, 2, 3, 4, 5, 6, 7];
   const { changeChatData } = useChatData();
   const { changeChatView } = useChatView();
@@ -11,13 +11,13 @@ export default function Peoples() {
   return (
     <div className="container-fluid d-flex flex-column">
       <div className="sticky-top">
-        <span className="fs-1 fw-bolder">Peoples</span>
+        <span className="fs-1 fw-bolder">People</span>
         <div className="input-group my-4">
           <input className="form-control" type="text" />
           <span className="input-group-text">Search</span>
         </div>
       </div>
-      <div className="mt-4 flex-grow-1 h-full nav nav-pills">
+      <div className="mt-4 flex-grow-1 h-full nav">
         {/* {list.map((key) => (
           <div
             key={key}

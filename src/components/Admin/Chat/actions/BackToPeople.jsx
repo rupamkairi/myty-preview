@@ -4,7 +4,7 @@ import { useChatView } from "../../../../contexts/ChatViewContext";
 import { useChatData } from "../../../../contexts/ChatDataContext";
 import { ReactComponent as BackIcon } from "bootstrap-icons/icons/chevron-left.svg";
 
-export default function BackToPeoples() {
+export default function BackToPeople() {
   const { changeChatView } = useChatView();
   const { changeChatData } = useChatData();
   return (

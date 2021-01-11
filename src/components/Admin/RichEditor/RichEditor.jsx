@@ -24,6 +24,7 @@ import { ReactComponent as ColorIcon } from "bootstrap-icons/icons/palette.svg";
 //
 import { ReactComponent as ImageIcon } from "bootstrap-icons/icons/images.svg";
 import { ReactComponent as VideoIcon } from "bootstrap-icons/icons/camera-video.svg";
+//
 
 export default function RichEditor() {
   const history = useHistory();
@@ -33,7 +34,8 @@ export default function RichEditor() {
   };
 
   return (
-    <div className="container my-5">
+    <div className="container">
+      <p className="fs-1 fw-bold">Write your Blog</p>
       <div className="text-end">
         <button className="btn btn-outline-primary" onClick={preview}>
           <PreviewIcon />
@@ -110,7 +112,7 @@ export default function RichEditor() {
       </div>
       <textarea
         className="container border-0 block"
-        rows="20"
+        rows="1"
         placeholder="Content goes here"
       ></textarea>
       <div className="text-end my-5">

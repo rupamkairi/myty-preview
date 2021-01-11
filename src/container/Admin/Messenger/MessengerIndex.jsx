@@ -4,7 +4,7 @@ import { useChatView } from "../../../contexts/ChatViewContext";
 import { useChatData } from "../../../contexts/ChatDataContext";
 //
 //
-import Peoples from "../../../components/Admin/Peoples/Peoples";
+import People from "../../../components/Admin/People/People";
 import Chat from "../../../components/Admin/Chat/Chat";
 
 export default function MessengerIndex() {
@@ -21,7 +21,7 @@ export default function MessengerIndex() {
               "container-fluid col-12 col-lg-5 col-xl-4 col-xxl-3 h-full overflow-auto"
             }
           >
-            <Peoples />
+            <People />
           </div>
           <div
             className={

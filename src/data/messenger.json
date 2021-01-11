@@ -1,0 +1,24 @@
+{
+  "people": [
+    {
+      "chatId": 1,
+      "username": "",
+      "fullname": "",
+      "active_status": true,
+      "last_status": {
+        "message": "",
+        "by_user": "1"
+      }
+    },
+    {
+      "chatId": 2,
+      "username": "",
+      "fullname": "",
+      "active_status": false,
+      "last_status": {
+        "message": "",
+        "by_user": "0"
+      }
+    }
+  ]
+}

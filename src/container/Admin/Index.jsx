@@ -8,6 +8,7 @@ import {
 //
 import { ChatViewProvider } from "../../contexts/ChatViewContext";
 import { ChatDataProvider } from "../../contexts/ChatDataContext";
+import { SettingsViewProvider } from "../../contexts/SettingsViewContext";
 //
 import Admin from "./Admin";
 import MessengerIndex from "./Messenger/MessengerIndex";
@@ -44,7 +45,9 @@ export default function AdminIndex() {
                 <EditorIndex />
               </Route>
               <Route exact path={`${path}/settings`}>
-                <SettingsIndex />
+                <SettingsViewProvider>
+                  <SettingsIndex />
+                </SettingsViewProvider>
               </Route>
               <Route exact path={`${path}/*`}>
                 <Error />

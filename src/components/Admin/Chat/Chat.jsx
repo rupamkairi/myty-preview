@@ -3,7 +3,7 @@ import React from "react";
 import { useChatData } from "../../../contexts/ChatDataContext";
 
 //
-import BackToPeoples from "./actions/BackToPeoples";
+import BackToPeople from "./actions/BackToPeople";
 import OptionsMenu from "./actions/OptionsMenu";
 import ChatHeader from "./ChatHeader";
 import Threads from "./Threads";
@@ -17,12 +17,14 @@ export default function Chat() {
   return (
     <React.Fragment>
       {currentChatData === 0 ? (
-        <p>no data</p>
+        <div className="d-flex h-full justify-content-center align-items-center">
+          Select a person to see the chats.
+        </div>
       ) : (
-        <div className="container-fluid h-full d-flex flex-column justify-content-between tab-pane">
+        <div className="container-fluid h-full d-flex flex-column justify-content-between">
           <header className="h-bar sticky-top d-flex align-items-center justify-content-between">
             <span>
-              <BackToPeoples />
+              <BackToPeople />
             </span>
             <ChatHeader />
             <span>
