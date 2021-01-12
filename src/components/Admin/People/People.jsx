@@ -23,7 +23,7 @@ export default function People() {
       <div className="mt-4 flex-grow-1 h-full nav">
         {people.map((data) => (
           <div
-            className="card my-2 py-4 container-fluid rounded-3 d-flex flex-row justify-content-start align-items-center nav-link"
+            className="card my-2 py-4 container-fluid rounded-3 d-flex flex-row justify-content-start align-items-center nav-link position-relative"
             onClick={() => {
               // console.log(data);
               changeChatData(data);
@@ -31,9 +31,21 @@ export default function People() {
               changeChatView(1);
             }}
           >
-            <div className="d-flex flex-column">
+            <span className="fw-light position-absolute top-0 start-0 translate-middle">
+              {data.active_status ? (
+                <div
+                  style={{
+                    width: "16px",
+                    height: "16px",
+                  }}
+                  className="rounded-circle bg-primary bg-gradient"
+                ></div>
+              ) : (
+                ""
+              )}
+            </span>
+            <div className="d-flex flex-column ">
               <span className="fw-bold">{data.fullname}</span>
-              <span className="fw-light">{data.active_status ? 1 : 0}</span>
             </div>
           </div>
         ))}
