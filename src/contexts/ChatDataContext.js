@@ -9,8 +9,8 @@ export function useChatData() {
 }
 
 export function ChatDataProvider({ children }) {
-  const [currentChatData, setCurrentChatData] = useState(null);
-  const [currentChatThreads, setCurrentChatThreads] = useState(null);
+  const [currentChatData, setCurrentChatData] = useState(0);
+  const [currentChatThreads, setCurrentChatThreads] = useState(0);
 
   function changeChatData(chatData) {
     // console.log(chatData);
@@ -24,7 +24,7 @@ export function ChatDataProvider({ children }) {
 
   useEffect(() => {
     setCurrentChatData(0);
-    setCurrentChatThreads(null);
+    setCurrentChatThreads(0);
     return;
   }, []);
 
