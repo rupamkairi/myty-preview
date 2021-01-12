@@ -10,7 +10,7 @@ export function ChatViewProvider({ children }) {
   const [currentChatView, setCurrentChatView] = useState(0);
 
   function changeChatView(viewIndex) {
-    console.log(viewIndex);
+    // console.log(viewIndex);
     setCurrentChatView(viewIndex);
   }
 

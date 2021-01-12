@@ -26,14 +26,13 @@ export default function Chat() {
             <span>
               <BackToPeople />
             </span>
-            <ChatHeader />
+            <ChatHeader fullname={currentChatData.fullname} />
             <span>
               <OptionsMenu />
             </span>
           </header>
           <main className="flex-grow-1">
             <Threads />
-            <pre>{JSON.stringify(currentChatData, null, 2)}</pre>
           </main>
           <footer className="h-f-bar sticky-bottom d-flex align-items-center justify-content-between">
             <ChatFooter />

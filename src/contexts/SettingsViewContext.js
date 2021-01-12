@@ -10,7 +10,7 @@ export function SettingsViewProvider({ children }) {
   const [currentSettingsView, setCurrentSettingsView] = useState(0);
 
   function changeSettingsView(viewIndex) {
-    console.log(viewIndex);
+    // console.log(viewIndex);
     setCurrentSettingsView(viewIndex);
   }
 

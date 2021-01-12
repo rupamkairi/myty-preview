@@ -2,8 +2,8 @@
   "people": [
     {
       "chatId": 1,
-      "username": "",
-      "fullname": "",
+      "username": "deangray",
+      "fullname": "Dean Gray",
       "active_status": true,
       "last_status": {
         "message": "",
@@ -12,8 +12,8 @@
     },
     {
       "chatId": 2,
-      "username": "",
-      "fullname": "",
+      "username": "Cocoper",
+      "fullname": "Colleen Cooper",
       "active_status": false,
       "last_status": {
         "message": "",

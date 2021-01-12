@@ -1,0 +1,25 @@
+{
+  "chatId": 1,
+  "threads": [
+    {
+      "by_user": 1,
+      "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "by_user": 1,
+      "message": "Nullam ac lacus semper, eleifend sem non, imperdiet elit."
+    },
+    {
+      "by_user": 0,
+      "message": "Aliquam vel urna sodales, varius mauris a, congue odio."
+    },
+    {
+      "by_user": 1,
+      "message": "Etiam convallis lorem vel volutpat varius."
+    },
+    {
+      "by_user": 1,
+      "message": "Nullam hendrerit eros nec tortor pulvinar fringilla."
+    }
+  ]
+}

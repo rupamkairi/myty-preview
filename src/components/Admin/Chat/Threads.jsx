@@ -1,21 +1,23 @@
 import React from "react";
 //
 import Thread from "./Thread";
+//
+import { useChatData } from "../../../contexts/ChatDataContext";
 
 export default function Threads() {
+  const { currentChatThreads } = useChatData();
   return (
     <div className="d-flex flex-column justify-content-center align-items-center">
-      <Thread
-        position="left"
-        data={{
-          message:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore nisi, sint natus, magni quam cumque modi mollitia molestiae perspiciatis, quae assumenda officia ea?",
-        }}
-      />
-      <Thread
-        position="right"
-        data={{ message: "Incidunt voluptas facere modi magni corporis quia?" }}
-      />
+      {currentChatThreads.map((data) => {
+        return (
+          <Thread
+            position={data.by_user === 0 ? "right" : "left"}
+            data={{
+              message: data.message,
+            }}
+          />
+        );
+      })}
     </div>
   );
 }
