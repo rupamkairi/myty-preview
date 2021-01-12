@@ -13,13 +13,3 @@ Chat Messenger
 
 Deployment:
 https://myty-preview.vercel.app
-
-To Do:
-side navbar to bottom toolbar
-
-
-data = 0      :     { ... }
-       people       
-                    chat
-                    <
-       people
